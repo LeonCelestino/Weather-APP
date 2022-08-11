@@ -1,0 +1,509 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,500&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 62.4%;
+}
+
+body 
+{
+    width: 100%;
+    max-width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+section
+{
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(./images/bg.webp) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 70px;
+}
+
+
+.currentWeather-box
+{
+    min-width: 35em;
+    width: 70%;
+    max-width: 100em;
+    min-height: 30em;
+    height: 90%;
+    max-height: 70em;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.temperature-and-icon
+{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+.currentWeather-box .temperature-and-icon
+{
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.currentWeather-box .temperature-and-icon .txt-box
+{
+    padding: 0 15px;
+}
+
+.currentWeather-box .temperature-and-icon .txt-box .txt
+{
+    font-size: 8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: rgba(255,255,255,0.8);
+}
+
+
+.currentWeather-box .temperature-and-icon .txt-box .small-txt
+{
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: capitalize;
+    text-align: right;
+    margin-top: -30px;
+    color: rgba(255,255,255,1);
+}
+
+.currentWeather-box .temperature-and-icon .txt-box p #city
+{
+    font-size: 2.8rem;
+    font-weight: 200;
+}
+
+
+.currentWeather-box .temperature-and-icon .img-box
+{
+    width: 18em;
+}
+
+.currentWeather-box .temperature-and-icon .img-box img
+{
+    max-width: 100%;
+}
+.currentWeather-box .others
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+
+.currentWeather-box .others p {
+    margin-top: 15px;
+    font-size: 3rem;
+}
+
+/* other days weather */
+.other-days-weather-box
+{
+    width: 30em;
+    height: 100%;
+    padding: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 30px;
+}
+
+.other-days-weather-box::-webkit-scrollbar
+{
+    width: 5px;
+    height: 2px;
+}
+
+.other-days-weather-box::-webkit-scrollbar-track
+{
+    background: rgba(0,0,0,0.8);
+    margin-block: 3em;
+    
+}
+
+.other-days-weather-box::-webkit-scrollbar-thumb
+{
+    border-radius: 5px;
+    background: rgba(255,255,255,0.5);
+}
+
+.other-days-weather-box::-webkit-scrollbar-thumb:hover
+{
+    border-radius: 5px;
+    background: rgba(255,255,255,0.8);
+}
+
+.other-days-weather-box .smaller-weather-box 
+{
+    padding: 20px;
+    margin-bottom: 10px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 30px;
+}
+
+.other-days-weather-box .smaller-weather-box .temperature-and-icon 
+{
+    flex-direction: column-reverse;
+    align-items: center;
+
+}
+
+.other-days-weather-box .smaller-weather-box .temperature-and-icon .txt
+{
+    font-weight: 700;
+    font-size: 3rem;
+    color: rgba(255,255,255,0.8);
+    line-height:  1;
+    margin-bottom: 5px;
+}
+
+.other-days-weather-box .smaller-weather-box .temperature-and-icon .small-txt
+{
+    color: rgba(255,255,255,1);
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.other-days-weather-box .smaller-weather-box .temperature-and-icon #city
+{
+    font-size: 1.8rem;
+}
+
+.other-days-weather-box .smaller-weather-box .temperature-and-icon .img-box
+{
+    width: 10em;
+    height: 11em;
+    
+
+}
+
+.other-days-weather-box .smaller-weather-box .temperature-and-icon .img-box img
+{
+    max-width: 100%;
+}
+
+.other-days-weather-box .smaller-weather-box .others
+{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.other-days-weather-box .smaller-weather-box .others p
+{
+    font-size: 1.5rem;
+}
+
+
+/* GERAL STYLING */
+.dark-opac-bg
+{
+    background: rgba(0,0,0,0.6);
+}
+
+.dark-border
+{
+    border: 3px solid rgba(136, 11, 11, 0.5);
+}
+
+.light-border
+{
+    border: 3px solid rgba(255,255,255,0.5);
+    border-radius: 30px;
+}
+
+.light-weight
+{
+    font-weight: 200;
+    
+}
+
+.small-txt
+{
+    font-size: 2rem;
+}
+
+.txt
+{
+    color: white;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1820px)
+{
+    section
+    {
+        justify-content: space-around;
+
+    }
+
+    .currentWeather-box
+    {
+        width: 100em;
+        height: 80em;
+    }
+
+    .currentWeather-box .temperature-and-icon  {
+        align-items: center;
+    }
+
+    .currentWeather-box .temperature-and-icon .txt-box .temp
+    {
+        font-size: 12rem;
+    }
+
+    .currentWeather-box .temperature-and-icon .txt-box .small-txt
+    {
+        font-size: 6rem;
+    }
+
+    .currentWeather-box .temperature-and-icon .txt-box .small-txt #city
+    {
+        font-size: 5rem;
+    }
+
+
+    .currentWeather-box .temperature-and-icon  .img-box img
+    {
+        width: 30em;
+        max-width: 30em;
+    }
+
+    .currentWeather-box .others .left-box-information .small-txt, .currentWeather-box .others .right-box-information .small-txt
+    {
+        font-size: 4rem;
+    }
+
+    .other-days-weather-box
+    {
+        width: 40em;
+    }
+
+    .other-days-weather-box .smaller-weather-box .temperature-and-icon .txt
+    {
+        font-size: 5rem;
+    }
+
+    .other-days-weather-box .smaller-weather-box .temperature-and-icon .small-txt
+    {
+        font-size: 4rem;
+    }
+    .other-days-weather-box .smaller-weather-box .temperature-and-icon .small-txt #city
+    {
+        font-size: 3.5rem;
+    }
+
+    .other-days-weather-box .smaller-weather-box .others p
+    {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: 1138px)
+{
+    section
+    {
+        justify-content: center;
+    }
+
+    .currentWeather-box 
+    {
+        height: 35em;
+    }
+
+    .currentWeather-box .temperature-and-icon .txt-box .txt
+    {
+        font-size: 4rem;
+    }
+
+    .currentWeather-box .temperature-and-icon .txt-box .small-txt
+    {
+        font-size: 3.5rem;
+    }
+    .currentWeather-box .temperature-and-icon .img-box
+    {
+        width: 10em;
+    }
+
+    .currentWeather-box .others .left-box-information .small-txt, .currentWeather-box .others .right-box-information .small-txt
+    {
+        font-size: 2rem;
+    }
+
+    .other-days-weather-box
+    {
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: auto;
+        min-width: 30em;
+        width: 50em;
+        height: 15em;
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .other-days-weather-box .smaller-weather-box
+    {
+        height: 100%;
+    }
+
+    .other-days-weather-box .smaller-weather-box .temperature-and-icon
+    {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .other-days-weather-box .smaller-weather-box .temperature-and-icon .img-box
+    {
+        width: 5em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: -10px;
+    }
+
+    .other-days-weather-box .smaller-weather-box .temperature-and-icon .txt-box
+    {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .other-days-weather-box .smaller-weather-box .temperature-and-icon .txt-box .txt
+    {
+        font-size: 1.5rem;
+    } 
+
+    .other-days-weather-box .smaller-weather-box .temperature-and-icon .txt-box .small-txt
+    {
+        font-size: 1.2rem;
+    }
+
+    .other-days-weather-box .smaller-weather-box .temperature-and-icon .txt-box .small-txt #city
+    {
+        font-size: 1.2rem;
+    }
+
+    .other-days-weather-box .smaller-weather-box .others
+    {
+        margin-top: -15px;
+        gap: 15px;
+    }
+
+    .other-days-weather-box .smaller-weather-box .others .left-box-information .small-txt, .other-days-weather-box .smaller-weather-box .others .right-box-information .small-txt
+    {
+        font-size: 0.87rem;
+    }
+
+
+    .other-days-weather-box::-webkit-scrollbar-track
+    {
+        background: rgba(0,0,0,0.8);
+        margin-inline: 3em;
+        
+    }
+}
+
+@media (max-width: 760px)
+{
+    .currentWeather-box .temperature-and-icon .txt-box .txt
+    {
+        font-size: 3rem;
+    }
+
+    .currentWeather-box .temperature-and-icon .txt-box .small-txt
+    {
+        font-size: 2.5rem;
+    }
+
+    .currentWeather-box .temperature-and-icon .txt-box .small-txt #city
+    {
+        font-size: 2.5rem;
+    }
+
+    .currentWeather-box .temperature-and-icon .img-box
+    {
+        width: 10em;
+    }
+
+    .currentWeather-box .others .left-box-information .small-txt, .currentWeather-box .others .right-box-information .small-txt
+    {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px)
+{
+    
+    .other-days-weather-box .smaller-weather-box .temperature-and-icon .txt-box .txt
+    {
+        font-size: 1.2rem;
+    } 
+
+    .other-days-weather-box .smaller-weather-box .temperature-and-icon .txt-box .small-txt, .other-days-weather-box .smaller-weather-box .temperature-and-icon .txt-box .small-txt #city
+    {
+        font-size: 1rem;
+    }
+
+    .other-days-weather-box .smaller-weather-box .others .left-box-information .small-txt, .other-days-weather-box .smaller-weather-box .others .right-box-information .small-txt
+    {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px)
+{
+    .currentWeather-box
+    {
+        min-width: 30em;
+    }
+
+    .currentWeather-box .temperature-and-icon .txt-box .txt 
+    {
+        font-size: 3.5rem;
+    }
+
+    .currentWeather-box .temperature-and-icon .txt-box .small-txt
+    {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+    .currentWeather-box .temperature-and-icon .txt-box .small-txt #city
+    {
+        font-size: 3rem;
+    }
+    .currentWeather-box .temperature-and-icon .img-box
+    {
+        width: 10em;
+    }
+
+    .currentWeather-box .others .left-box-information .small-txt, .currentWeather-box .others .right-box-information .small-txt
+    {
+        font-size: 1.5rem;
+    }
+}
